@@ -26,8 +26,8 @@
         "gravity": 0.008,
         "group_player_objects": false,
         "lag_compensation_mode": 1,
-        "map": "Dubai Maps",
-        "mode": "V2",
+        "map": "San Andreas",
+        "mode": "V1",
         "nametag_draw_radius": 140,
         "player_marker_draw_radius": 250,
         "player_marker_mode": 1,
@@ -65,7 +65,7 @@
     },
     "max_bots": 0,
     "max_players": 300,
-    "name": "Dubai Roleplay V2 [STABLED]",
+    "name": "Dubai Roleplay",
     "network": {
         "acks_limit": 3000,
         "aiming_sync_rate": 30,
@@ -83,7 +83,7 @@
         "on_foot_sync_rate": 30,
         "player_marker_sync_rate": 2500,
         "player_timeout": 30000,
-        "port": 5050,
+        "port": 1111,
         "public_addr": "",
         "stream_radius": 200,
         "stream_rate": 1000,
@@ -106,7 +106,7 @@
             "pawnregex.so"
         ],
         "main_scripts": [
-            "NEELAN"
+            "xrp"
         ],
         "side_scripts": [
             "filterscripts/sampvoice"
@@ -118,7 +118,7 @@
         "password": ""
     },
     "sampvoice": {
-        "port": 44050,
+        "port": 1111,
         "threads": 4,
         "updaterate": 30
     },

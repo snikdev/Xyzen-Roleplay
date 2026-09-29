@@ -1,0 +1,29 @@
+# Editor and local workspace files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+
+# Runtime logs and diagnostics
+*.log
+crashdetect.log
+profiler/*.html
+profiler/*.json
+
+# Generated Pawn binaries
+*.amx
+
+# Local Pawn compiler includes
+pawno/include/
+
+# Crash dumps and temporary files
+*.dmp
+*.tmp
+*.bak
+Thumbs.db
+desktop.ini
