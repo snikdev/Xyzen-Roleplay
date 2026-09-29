@@ -6,15 +6,15 @@
 
 #define MAX_VOICE_RADIO 31
 #define MAX_RADIOS 50 
-#define DUBAI_VOICE_BLUE 0x2F80EDFF
+#define XYZEN_VOICE_BLUE 0x2F80EDFF
 #define INSERT_KEY 0x2D
 #define VOICE_TALK_KEY 0x42
 #define MAX_INSERT_WARNINGS 2
 #define pKicked 0
 new PlayerInfo[MAX_PLAYERS][1];
 new insert_key_warnings[MAX_PLAYERS];
-new dubai_voice_call_name[] = "Dubai Voice | Call";
-new dubai_voice_local_name[] = "Dubai Voice | Local";
+new xyzen_voice_call_name[] = "Xyzen Voice | Call";
+new xyzen_voice_local_name[] = "Xyzen Voice | Local";
 new voice_phonecall_targetid[MAX_PLAYERS];
 new voice_radiocall_radioid[MAX_PLAYERS];
 new voice_factioncall_radioid[MAX_PLAYERS][2];
@@ -30,7 +30,7 @@ public SV_VOID:OnPlayerActivationKeyPress(SV_UINT:playerid, SV_UINT:keyid)
     {
         // PlayerInfo belongs to the gamemode AMX, so request the real pAdmin
         // value through a public bridge instead of maintaining a duplicate.
-        if (CallRemoteFunction("DubaiVoice_GetAdminLevel", "i", playerid) > 0)
+        if (CallRemoteFunction("XyzenVoice_GetAdminLevel", "i", playerid) > 0)
         {
             return;
         }
@@ -41,14 +41,14 @@ public SV_VOID:OnPlayerActivationKeyPress(SV_UINT:playerid, SV_UINT:keyid)
         {
             new warning[160];
             format(warning, sizeof(warning),
-                "{2F80ED}[DUBAI VOICE] {FFFFFF}Insert is restricted to administrators. Warning {FFCC00}%d/%d{FFFFFF}; the next attempt will disconnect you.",
+                "{2F80ED}[XYZEN VOICE] {FFFFFF}Insert is restricted to administrators. Warning {FFCC00}%d/%d{FFFFFF}; the next attempt will disconnect you.",
                 insert_key_warnings[playerid], MAX_INSERT_WARNINGS);
             SendClientMessage(playerid, -1, warning);
         }
         else
         {
             SendClientMessage(playerid, -1,
-                "{2F80ED}[DUBAI VOICE] {FFFFFF}You were disconnected after repeatedly using the administrator-only Insert key.");
+                "{2F80ED}[XYZEN VOICE] {FFFFFF}You were disconnected after repeatedly using the administrator-only Insert key.");
             KickPlayer(playerid);
         }
         return;
@@ -236,8 +236,8 @@ public callstreams(targetid, playerid)
     deletecallstream(playerid);
     deletecallstream(targetid);
 
-   	callstream[playerid] = SvCreateGStream(DUBAI_VOICE_BLUE, dubai_voice_call_name);
-    callstream[targetid] = SvCreateGStream(DUBAI_VOICE_BLUE, dubai_voice_call_name);
+   	callstream[playerid] = SvCreateGStream(XYZEN_VOICE_BLUE, xyzen_voice_call_name);
+    callstream[targetid] = SvCreateGStream(XYZEN_VOICE_BLUE, xyzen_voice_call_name);
 
     if (!callstream[playerid] || !callstream[targetid])
     {
@@ -283,9 +283,9 @@ public OnPlayerConnect(playerid) {
     {
         SetPVarInt(playerid, "hasVoiceOnClient", 0);
         SendClientMessage(playerid, -1,
-            "{2F80ED}[DUBAI VOICE] {FFFFFF}Voice client not detected. Install SA-MP Voice before joining Dubai Roleplay.");
+            "{2F80ED}[XYZEN VOICE] {FFFFFF}Voice client not detected. Install SA-MP Voice before joining Xyzen Roleplay.");
         SendClientMessage(playerid, -1,
-            "{2F80ED}[DUBAI VOICE] {FF6B6B}Connection closed: {FFFFFF}voice verification could not be completed.");
+            "{2F80ED}[XYZEN VOICE] {FF6B6B}Connection closed: {FFFFFF}voice verification could not be completed.");
 		KickPlayer(playerid);
     }
     
@@ -294,11 +294,11 @@ public OnPlayerConnect(playerid) {
         
         SetPVarInt(playerid, "hasVoiceOnClient", 2);
         SendClientMessage(playerid, -1,
-            "{2F80ED}[DUBAI VOICE] {FFCC00}Microphone not detected. {FFFFFF}Connect a microphone to use proximity voice chat.");
+            "{2F80ED}[XYZEN VOICE] {FFCC00}Microphone not detected. {FFFFFF}Connect a microphone to use proximity voice chat.");
     }
     
     
-    else if ((local_stream[playerid] = SvCreateDLStreamAtPlayer(40.0, SV_INFINITY, playerid, DUBAI_VOICE_BLUE, dubai_voice_local_name)))
+    else if ((local_stream[playerid] = SvCreateDLStreamAtPlayer(40.0, SV_INFINITY, playerid, XYZEN_VOICE_BLUE, xyzen_voice_local_name)))
     {
         
         SvAddKey(playerid, VOICE_TALK_KEY);
@@ -307,7 +307,7 @@ public OnPlayerConnect(playerid) {
         
         SetPVarInt(playerid, "hasVoiceOnClient", 1);
         SendClientMessage(playerid, -1,
-            "{2F80ED}[DUBAI VOICE] {FFFFFF}Voice initialization completed successfully. Hold {2F80ED}B {FFFFFF}to speak.");
+            "{2F80ED}[XYZEN VOICE] {FFFFFF}Voice initialization completed successfully. Hold {2F80ED}B {FFFFFF}to speak.");
     }
     
 }
@@ -336,8 +336,8 @@ public OnFilterScriptInit() {
     
     for(new i = 0; i < MAX_VOICE_RADIO; i++)
     {
-        format(string, sizeof(string), "Dubai Voice | Radio %i", i);
-        radio_stream[i] = SvCreateGStream(DUBAI_VOICE_BLUE, string);
+        format(string, sizeof(string), "Xyzen Voice | Radio %i", i);
+        radio_stream[i] = SvCreateGStream(XYZEN_VOICE_BLUE, string);
     }
 }
 
@@ -355,11 +355,11 @@ public createfgstream(fgid, type)
     {
        case 0 :
        {
-           format(string, sizeof(string), "Dubai Voice | Gang Radio %i", fgid);
+           format(string, sizeof(string), "Xyzen Voice | Gang Radio %i", fgid);
        }
        case 1 :
        {
-           format(string, sizeof(string), "Dubai Voice | Faction Radio %i", fgid);
+           format(string, sizeof(string), "Xyzen Voice | Faction Radio %i", fgid);
        }
 
     }
@@ -367,7 +367,7 @@ public createfgstream(fgid, type)
     {
         SvDeleteStream(factiongang_stream[fgid][type]);
     }
-    factiongang_stream[fgid][type] = SvCreateGStream(DUBAI_VOICE_BLUE, string);
+    factiongang_stream[fgid][type] = SvCreateGStream(XYZEN_VOICE_BLUE, string);
 	return 1;
 }
 

@@ -1,22 +1,11 @@
 
 
 /*
-
-			
-					_______   __    __  _______    ______   ______        __     __   ______  
-					/       \ /  |  /  |/       \  /      \ /      |      /  |   /  | /      \ 
-					$$$$$$$  |$$ |  $$ |$$$$$$$  |/$$$$$$  |$$$$$$/       $$ |   $$ |/$$$$$$  |
-					$$ |  $$ |$$ |  $$ |$$ |__$$ |$$ |__$$ |  $$ |        $$ |   $$ |$$____$$ |
-					$$ |  $$ |$$ |  $$ |$$    $$< $$    $$ |  $$ |        $$  \ /$$/  /    $$/ 
-					$$ |  $$ |$$ |  $$ |$$$$$$$  |$$$$$$$$ |  $$ |         $$  /$$/  /$$$$$$/  
-					$$ |__$$ |$$ \__$$ |$$ |__$$ |$$ |  $$ | _$$ |_         $$ $$/   $$ |_____ 
-					$$    $$/ $$    $$/ $$    $$/ $$ |  $$ |/ $$   |         $$$/    $$       |
-					$$$$$$$/   $$$$$$/  $$$$$$$/  $$/   $$/ $$$$$$/           $/     $$$$$$$$/ 
 																								
-										Re Fixed by : KoDdy Vx
-								    Main Developer : NeeLan ICNQ
-								Server Developer : ZpyRx & RaziScofield
-								 	Textdrawer :  WroxExM & NeelanX
+										Re Fixed by : Snik
+								    Main Developer : Zack
+								Server Developer : Zack & Snik
+								 	Textdrawer :  Zack & Snik
 								Base From AKRPV5 from najuaircrack
 
 						
@@ -107,15 +96,15 @@
 //  ========================== SERVER INFO ===================================
 // --------------------------------------------------------------------------
 
-#define SERVER_BOT       "Kuttappan:V1"
-#define VERSION          "V2"
-#define REVISION         "DU:RP: "VERSION""
-#define SERVER_GAMEMODE  "DU:RP"
-#define SERVER_NAME      "Dubai Roleplay"
+#define SERVER_BOT       "ControlX"
+#define VERSION          "V1"
+#define REVISION         "X:RP: "VERSION""
+#define SERVER_GAMEMODE  "X:RP"
+#define SERVER_NAME      "Xyzen Roleplay"
 #define SERVER_DIALOG    "{EC7063}"SERVER_NAME" "WHITE""VERSION""
 
-#define SERVER_URL       "https://discord.gg/PAcf77Zdn6"
-#define SERVER_DISCORD   "https://discord.gg/PAcf77Zdn6"
+#define SERVER_URL       "https://dsc.gg/xzrp"
+#define SERVER_DISCORD   "https://dsc.gg/xzrp"
 #define SERVER_MUSIC_URL "https://mp3tourl.com/audio/1783438246656-0232cffb-e784-415e-b944-76aa17b3bf8c.mp3"
 #define SERVER_FETCH_URL "https://mp3tourl.com/audio/1783438246656-0232cffb-e784-415e-b944-76aa17b3bf8c.mp3"
 
@@ -610,10 +599,10 @@ new g_player_listitem[MAX_PLAYERS][96];
 new GangStorageVehicleID[MAX_PLAYERS][MAX_GANG_STORAGE_VEHICLES];
 new GangStorageVehicleCount[MAX_PLAYERS];
 
-// Dailer Pad By NeelanX
+// Dailer Pad
 new DialerNumber[MAX_PLAYERS][32];
 
-// Calculator System By NeelanX & Wrox
+// Calculator System
 new
     CalcFirstNum[MAX_PLAYERS][32],
     CalcSecondNum[MAX_PLAYERS][32],
@@ -1028,7 +1017,7 @@ new Text: Textdraw2;
 new Text: Blind;
 new Text: TD;
 new Text: Blood[9];
-new Text: DUBAIV2LOGO[7];
+new Text: XYZENV1LOGO[7];
 new Text: VEHICLEPANEL[20];
 new Text: ANNOUNCETD[9];
 new Text: Valoeffect[1];
@@ -5792,7 +5781,7 @@ new const radioGenreList[][radioEnum] =
     {"Alternative", "Classic Alternative"},
     {"Alternative", "College"},
     {"Alternative", "Dancepunk"},
-    {"Alternative", "DUBAI Pop"},
+    {"Alternative", "XYZEN Pop"},
     {"Alternative", "Emo"},
     {"Alternative", "Goth"},
     {"Alternative", "Grunge"},
@@ -6504,7 +6493,7 @@ native WP_Hash(buffer[], len, const str[]);
 
 main()
 {
-    PrintDubaiRoleplayCredits();
+    PrintXyzenRoleplayCredits();
 }
 
 		
@@ -10500,12 +10489,12 @@ ShowDialogToPlayer(playerid, dialogid)
 		case DIALOG_REGISTER:
 		{
 			format(string, sizeof(string), ""WHITE"{ffffff}This account is not yet {7fff00}registered!\n{ffffff}Name : {ff0000}%s\n{ffffff}You can register by entering the password:", GetPlayerNameEx(playerid));
-			ShowPlayerDialog(playerid,DIALOG_REGISTER,DIALOG_STYLE_PASSWORD,""SVRCLR"Registration Dubai Roleplay",string,"Register","Abort");
+			ShowPlayerDialog(playerid,DIALOG_REGISTER,DIALOG_STYLE_PASSWORD,""SVRCLR"Registration Xyzen Roleplay",string,"Register","Abort");
 		}
 		case DIALOG_LOGIN:
 		{
 			format(string, sizeof(string), "{ffffff}This account has {7fff00}registered!\n{ffffff}Character Account :{7fffd4} %s\n{ffffff}Please login with your password:", GetPlayerNameEx(playerid));
-			ShowPlayerDialog(playerid,DIALOG_LOGIN,DIALOG_STYLE_PASSWORD,"Login to DURP City",string,"Login","Abort");
+			ShowPlayerDialog(playerid,DIALOG_LOGIN,DIALOG_STYLE_PASSWORD,"Login to XRP City",string,"Login","Abort");
 		}
         case DIALOG_INSTA:
 		{
@@ -11082,7 +11071,7 @@ ShowDialogToPlayer(playerid, dialogid)
 		
 		case DIALOG_LOCATE:
 		{
-			ShowPlayerDialog(playerid, DIALOG_LOCATE, DIALOG_STYLE_LIST, "{1E90FF}Dubai Roleplay {FFFFFF}- Location Navigator", "{00BFFF}General Locations\n{FF8C00}Google Navigation\n{2ECC71}Legal Job Locations\n{E74C3C}Illegal Activity Locations\n{9B59B6}Gang Turfs\n{F1C40F}Points", "Select", "Close");
+			ShowPlayerDialog(playerid, DIALOG_LOCATE, DIALOG_STYLE_LIST, "{1E90FF}Xyzen Roleplay {FFFFFF}- Location Navigator", "{00BFFF}General Locations\n{FF8C00}Google Navigation\n{2ECC71}Legal Job Locations\n{E74C3C}Illegal Activity Locations\n{9B59B6}Gang Turfs\n{F1C40F}Points", "Select", "Close");
 		}
 		case DIALOG_PAINTBALL:
 		{
@@ -15783,7 +15772,7 @@ stock CreateShowroomTextDraws(playerid)
     PlayerTextDrawFont(playerid, SHOWROOMTD[playerid][40], TEXT_DRAW_FONT_1);
     PlayerTextDrawSetProportional(playerid, SHOWROOMTD[playerid][40], true);
 
-    SHOWROOMTD[playerid][41] = CreatePlayerTextDraw(playerid, 362.000, 410.000, "DUBAI SHOWROOM OWNED BY:");
+    SHOWROOMTD[playerid][41] = CreatePlayerTextDraw(playerid, 362.000, 410.000, "XYZEN SHOWROOM OWNED BY:");
     PlayerTextDrawLetterSize(playerid, SHOWROOMTD[playerid][41], 0.170, 0.799);
     PlayerTextDrawAlignment(playerid, SHOWROOMTD[playerid][41], TEXT_DRAW_ALIGN_LEFT);
     PlayerTextDrawColour(playerid, SHOWROOMTD[playerid][41], 255);
@@ -16249,7 +16238,7 @@ stock InitLeaveSystem()
     {
         LeaveTimer = SetTimer("UpdateLeaveSystem", 1000, true);
     }
-    print("[Leave System] Initialized by WroxExM Successfully.");
+    print("[Leave System] Initialized by Zack Successfully.");
 
     return 1;
 }
@@ -16731,7 +16720,7 @@ public LoadSafeZonesChunk()
 
 	new iIndex = gSafeZoneLoadCursor++;
 	new string[128];
-	format(string, sizeof(string), "{00BFFF}[DURP]\n{33CCFF}SAFEZONE AREA\n{BFEFFF}Zone ID: {FFFFFF}%d", iIndex);
+	format(string, sizeof(string), "{00BFFF}[XRP]\n{33CCFF}SAFEZONE AREA\n{BFEFFF}Zone ID: {FFFFFF}%d", iIndex);
 
 	if(SafeZoneInfo[iIndex][szPosX] != 0.0)
 	{
@@ -21602,7 +21591,7 @@ public PlayerSpawn(playerid)
 			SendClientMessage(playerid, COLOR_BLUE, "[We are well aware of the script in use, please get to know our community before you pass on any judgement.]");
 
 			SendClientMessage(playerid, COLOR_YELLOW, "And also you're a poor guy, You need to find a job just type /findjob");
-			SMA(COLOR_LIGHTRED, "DURP AIRLINES: [%s(%d)] has just arrived to the city, welcome him/her through [/g]", GetRPName(playerid), playerid);
+			SMA(COLOR_LIGHTRED, "XRP AIRLINES: [%s(%d)] has just arrived to the city, welcome him/her through [/g]", GetRPName(playerid), playerid);
 		}
 	}
 }
@@ -26669,7 +26658,7 @@ stock ShowPlayerAccountLookup(playerid, bool:registered)
 		}
 
 		SelectTextDraw(playerid, COLOR_BLUE);
-		SCMf(playerid, COLOR_CYAN, "WELCOME TO DUBAI ROLEPLAY V2, COMPLETE YOUR CHARACTER SECTION");
+		SCMf(playerid, COLOR_CYAN, "WELCOME TO XYZEN ROLEPLAY V2, COMPLETE YOUR CHARACTER SECTION");
 	}
 	return 1;
 }
@@ -26884,7 +26873,7 @@ public OnQueryFinished(threadid, extraid)
 	            PlayerInfo[extraid][pPassword] = 0;
 	            if(!locked)
 	            {
-	                SendClientMessage(extraid, COLOR_ROYALBLUE, "Your Account Sucessfully registered in Dubai Database, You can freely Apply For Whitelist in Discord.");
+	                SendClientMessage(extraid, COLOR_ROYALBLUE, "Your Account Sucessfully registered in Xyzen Database, You can freely Apply For Whitelist in Discord.");
 	                SendClientMessage(extraid, COLOR_DARKGREEN, " "SERVER_URL" ");
 	                SAM(COLOR_YELLOW, "AdmWarning: %s tried to login with not whitelist.", GetRPName(extraid));
 	            }
@@ -29665,7 +29654,7 @@ public OnGameModeInit()
 	CreateDynamicPickup(1239, 1, 1481.633789, -1768.907836, 13.591897);
 
 
-	CreateDynamic3DTextLabel("{3B82F6}Dubai Police Department\n{FFFFFF}Manage official police services, legal records and citizen protection systems.\n{3B82F6}/getweaponlic {FFFFFF}- Apply and purchase a legal firearm license approved by the police department.\n{3B82F6}/createdocument {FFFFFF}- Create official police reports, criminal case files and legal investigation documents.\n{3B82F6}/pdinfo {FFFFFF}- View complete police department information, services and regulations.", -1, 2060.582519, -1402.042968, 19.021265, 15.0);
+	CreateDynamic3DTextLabel("{3B82F6}Xyzen Police Department\n{FFFFFF}Manage official police services, legal records and citizen protection systems.\n{3B82F6}/getweaponlic {FFFFFF}- Apply and purchase a legal firearm license approved by the police department.\n{3B82F6}/createdocument {FFFFFF}- Create official police reports, criminal case files and legal investigation documents.\n{3B82F6}/pdinfo {FFFFFF}- View complete police department information, services and regulations.", -1, 2060.582519, -1402.042968, 19.021265, 15.0);
 	CreateDynamicPickup(1239, 1, 2060.582519, -1402.042968, 19.021265);
 
 
@@ -29715,7 +29704,7 @@ public OnGameModeInit()
     CreateDynamic3DTextLabel("blackmarket\n {FFFFFF}/blackmarket to purchase illegal items.", COLOR_YELLOW, -415.010009, 1350.605102, 12.935342, 10.0);
 
 	// NEW PLAYER INFORMATION CENTER
-	CreateDynamic3DTextLabel("{00FF00}Welcome To Dubai Roleplay V2\n{BFBFBF}We are happy to see you here.\n{BFBFBF}Start your roleplay journey with us {BFBFBF}and enjoy realistic gameplay experience.\n{FFFFFF}Useful Commands:{00FF00}/newbinfo {BFBFBF}- Beginner Information\n{00FF00}/help {BFBFBF}- Server Help Menu\n{FFFFFF}Starter Rewards:{BFBFBF}Type {00FF00}/IloveV2 {BFBFBF}to claim{BFBFBF}your free startup gift package.\n{00FF00}Thank You For Joining Dubai Roleplay V2", 0xFFFFFFFF, 310.260803, -1796.190795, 6.846198, 5.0);
+	CreateDynamic3DTextLabel("{00FF00}Welcome To Xyzen Roleplay V2\n{BFBFBF}We are happy to see you here.\n{BFBFBF}Start your roleplay journey with us {BFBFBF}and enjoy realistic gameplay experience.\n{FFFFFF}Useful Commands:{00FF00}/newbinfo {BFBFBF}- Beginner Information\n{00FF00}/help {BFBFBF}- Server Help Menu\n{FFFFFF}Starter Rewards:{BFBFBF}Type {00FF00}/IloveV2 {BFBFBF}to claim{BFBFBF}your free startup gift package.\n{00FF00}Thank You For Joining Xyzen Roleplay V2", 0xFFFFFFFF, 310.260803, -1796.190795, 6.846198, 5.0);
 	CreateDynamicPickup(1239,1, 310.260803, -1796.190795, 6.846198);
 
     Create3DTextLabel("Press [H] to Illegal Revive", COLOR_WHITE, 1549.760620, 28.292753, 24.140625, 16.0, 0, false);
@@ -30296,75 +30285,75 @@ public OnGameModeInit()
 	TextDrawSetProportional(ANNOUNCETD[8], true);
 
 
-	DUBAIV2LOGO[0] = TextDrawCreate(594.000, 395.000, "Dubai");
-	TextDrawLetterSize(DUBAIV2LOGO[0], 0.368, 3.499);
-	TextDrawAlignment(DUBAIV2LOGO[0], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[0], 65535);
-	TextDrawSetShadow(DUBAIV2LOGO[0], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[0], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[0], 0);
-	TextDrawFont(DUBAIV2LOGO[0], TEXT_DRAW_FONT_1);
-	TextDrawSetProportional(DUBAIV2LOGO[0], true);
+	XYZENV1LOGO[0] = TextDrawCreate(594.000, 395.000, "Xyzen");
+	TextDrawLetterSize(XYZENV1LOGO[0], 0.368, 3.499);
+	TextDrawAlignment(XYZENV1LOGO[0], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[0], 65535);
+	TextDrawSetShadow(XYZENV1LOGO[0], 1);
+	TextDrawSetOutline(XYZENV1LOGO[0], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[0], 0);
+	TextDrawFont(XYZENV1LOGO[0], TEXT_DRAW_FONT_1);
+	TextDrawSetProportional(XYZENV1LOGO[0], true);
 
-	DUBAIV2LOGO[1] = TextDrawCreate(605.000, 423.000, "RP");
-	TextDrawLetterSize(DUBAIV2LOGO[1], 0.319, 1.598);
-	TextDrawAlignment(DUBAIV2LOGO[1], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[1], -1);
-	TextDrawSetShadow(DUBAIV2LOGO[1], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[1], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[1], 0);
-	TextDrawFont(DUBAIV2LOGO[1], TEXT_DRAW_FONT_1);
-	TextDrawSetProportional(DUBAIV2LOGO[1], true);
+	XYZENV1LOGO[1] = TextDrawCreate(605.000, 423.000, "RP");
+	TextDrawLetterSize(XYZENV1LOGO[1], 0.319, 1.598);
+	TextDrawAlignment(XYZENV1LOGO[1], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[1], -1);
+	TextDrawSetShadow(XYZENV1LOGO[1], 1);
+	TextDrawSetOutline(XYZENV1LOGO[1], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[1], 0);
+	TextDrawFont(XYZENV1LOGO[1], TEXT_DRAW_FONT_1);
+	TextDrawSetProportional(XYZENV1LOGO[1], true);
 
-	DUBAIV2LOGO[2] = TextDrawCreate(270.000, 9.000, "DUB");
-	TextDrawLetterSize(DUBAIV2LOGO[2], 0.216, 1.098);
-	TextDrawAlignment(DUBAIV2LOGO[2], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[2], 65535);
-	TextDrawSetShadow(DUBAIV2LOGO[2], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[2], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[2], 0);
-	TextDrawFont(DUBAIV2LOGO[2], TEXT_DRAW_FONT_2);
-	TextDrawSetProportional(DUBAIV2LOGO[2], true);
+	XYZENV1LOGO[2] = TextDrawCreate(270.000, 9.000, "DUB");
+	TextDrawLetterSize(XYZENV1LOGO[2], 0.216, 1.098);
+	TextDrawAlignment(XYZENV1LOGO[2], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[2], 65535);
+	TextDrawSetShadow(XYZENV1LOGO[2], 1);
+	TextDrawSetOutline(XYZENV1LOGO[2], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[2], 0);
+	TextDrawFont(XYZENV1LOGO[2], TEXT_DRAW_FONT_2);
+	TextDrawSetProportional(XYZENV1LOGO[2], true);
 
-	DUBAIV2LOGO[3] = TextDrawCreate(288.000, 9.000, "AI");
-	TextDrawLetterSize(DUBAIV2LOGO[3], 0.216, 1.098);
-	TextDrawAlignment(DUBAIV2LOGO[3], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[3], -1);
-	TextDrawSetShadow(DUBAIV2LOGO[3], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[3], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[3], 0);
-	TextDrawFont(DUBAIV2LOGO[3], TEXT_DRAW_FONT_2);
-	TextDrawSetProportional(DUBAIV2LOGO[3], true);
+	XYZENV1LOGO[3] = TextDrawCreate(288.000, 9.000, "AI");
+	TextDrawLetterSize(XYZENV1LOGO[3], 0.216, 1.098);
+	TextDrawAlignment(XYZENV1LOGO[3], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[3], -1);
+	TextDrawSetShadow(XYZENV1LOGO[3], 1);
+	TextDrawSetOutline(XYZENV1LOGO[3], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[3], 0);
+	TextDrawFont(XYZENV1LOGO[3], TEXT_DRAW_FONT_2);
+	TextDrawSetProportional(XYZENV1LOGO[3], true);
 
-	DUBAIV2LOGO[4] = TextDrawCreate(304.000, 9.000, "ROLEPLA");
-	TextDrawLetterSize(DUBAIV2LOGO[4], 0.217, 1.098);
-	TextDrawAlignment(DUBAIV2LOGO[4], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[4], -1);
-	TextDrawSetShadow(DUBAIV2LOGO[4], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[4], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[4], 0);
-	TextDrawFont(DUBAIV2LOGO[4], TEXT_DRAW_FONT_2);
-	TextDrawSetProportional(DUBAIV2LOGO[4], true);
+	XYZENV1LOGO[4] = TextDrawCreate(304.000, 9.000, "ROLEPLA");
+	TextDrawLetterSize(XYZENV1LOGO[4], 0.217, 1.098);
+	TextDrawAlignment(XYZENV1LOGO[4], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[4], -1);
+	TextDrawSetShadow(XYZENV1LOGO[4], 1);
+	TextDrawSetOutline(XYZENV1LOGO[4], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[4], 0);
+	TextDrawFont(XYZENV1LOGO[4], TEXT_DRAW_FONT_2);
+	TextDrawSetProportional(XYZENV1LOGO[4], true);
 
-	DUBAIV2LOGO[5] = TextDrawCreate(345.000, 9.000, "Y");
-	TextDrawLetterSize(DUBAIV2LOGO[5], 0.216, 1.098);
-	TextDrawAlignment(DUBAIV2LOGO[5], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[5], 65535);
-	TextDrawSetShadow(DUBAIV2LOGO[5], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[5], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[5], 0);
-	TextDrawFont(DUBAIV2LOGO[5], TEXT_DRAW_FONT_2);
-	TextDrawSetProportional(DUBAIV2LOGO[5], true);
+	XYZENV1LOGO[5] = TextDrawCreate(345.000, 9.000, "Y");
+	TextDrawLetterSize(XYZENV1LOGO[5], 0.216, 1.098);
+	TextDrawAlignment(XYZENV1LOGO[5], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[5], 65535);
+	TextDrawSetShadow(XYZENV1LOGO[5], 1);
+	TextDrawSetOutline(XYZENV1LOGO[5], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[5], 0);
+	TextDrawFont(XYZENV1LOGO[5], TEXT_DRAW_FONT_2);
+	TextDrawSetProportional(XYZENV1LOGO[5], true);
 
-	DUBAIV2LOGO[6] = TextDrawCreate(281.000, 20.000, "FEEL THE REAL RP EXPERIENCE");
-	TextDrawLetterSize(DUBAIV2LOGO[6], 0.128, 0.499);
-	TextDrawAlignment(DUBAIV2LOGO[6], TEXT_DRAW_ALIGN_LEFT);
-	TextDrawColour(DUBAIV2LOGO[6], -2139062017);
-	TextDrawSetShadow(DUBAIV2LOGO[6], 1);
-	TextDrawSetOutline(DUBAIV2LOGO[6], 1);
-	TextDrawBackgroundColour(DUBAIV2LOGO[6], 0);
-	TextDrawFont(DUBAIV2LOGO[6], TEXT_DRAW_FONT_1);
-	TextDrawSetProportional(DUBAIV2LOGO[6], true);
+	XYZENV1LOGO[6] = TextDrawCreate(281.000, 20.000, "FEEL THE REAL RP EXPERIENCE");
+	TextDrawLetterSize(XYZENV1LOGO[6], 0.128, 0.499);
+	TextDrawAlignment(XYZENV1LOGO[6], TEXT_DRAW_ALIGN_LEFT);
+	TextDrawColour(XYZENV1LOGO[6], -2139062017);
+	TextDrawSetShadow(XYZENV1LOGO[6], 1);
+	TextDrawSetOutline(XYZENV1LOGO[6], 1);
+	TextDrawBackgroundColour(XYZENV1LOGO[6], 0);
+	TextDrawFont(XYZENV1LOGO[6], TEXT_DRAW_FONT_1);
+	TextDrawSetProportional(XYZENV1LOGO[6], true);
 
 	// Blindfold - Ez Jeck
 	Blind = TextDrawCreate(641.199951, 1.500000, "usebox");
@@ -30757,7 +30746,7 @@ stock CancelFuelLoading(playerid)
 forward SendDelayMessage(playerid);
 public SendDelayMessage(playerid)
 {
-	CreateNotification(playerid, "Welcome Back to Dubai Roleplay V2");
+	CreateNotification(playerid, "Welcome Back to Xyzen Roleplay V2");
     return 1;
 }
 
@@ -30770,14 +30759,14 @@ public OnClientCheckResponse(playerid, actionid, memaddr, retndata)
     {
         case 0xA0:
 		{
-            SendClientMessage(playerid, COLOR_SYNTAX, "DUBAI X| ANTI-EXPLOIT] Your game files have been verified and are clean.");
+            SendClientMessage(playerid, COLOR_SYNTAX, "XYZEN X| ANTI-EXPLOIT] Your game files have been verified and are clean.");
             format(string, sizeof(string), "Player %s (ID: %d) has clean game files. No modification detected.", GetRPName(playerid), playerid);
             SendDiscordMessage(2, string);
 
 		}
         default:
 		{
-            SendClientMessage(playerid, COLOR_SYNTAX, "DUBAI - X| ANTI-EXPLOIT]{ed0023} Modified game files detected!");
+            SendClientMessage(playerid, COLOR_SYNTAX, "XYZEN - X| ANTI-EXPLOIT]{ed0023} Modified game files detected!");
             //SetTimerEx("SendDelayMessage", 6000, false, "i", playerid);
 	    }
     }
@@ -30869,8 +30858,8 @@ public InitDeferredPlayerMapping(playerid, generation)
 
 // Public bridge used by the sampvoice filterscript. Filterscripts run in a
 // separate AMX and cannot read this gamemode's PlayerInfo array directly.
-forward DubaiVoice_GetAdminLevel(playerid);
-public DubaiVoice_GetAdminLevel(playerid)
+forward XyzenVoice_GetAdminLevel(playerid);
+public XyzenVoice_GetAdminLevel(playerid)
 {
 	if(!IsPlayerConnected(playerid))
 	{
@@ -30977,7 +30966,7 @@ public OnPlayerConnect(playerid)
 
 		if(g_DiscordConnectLog)
 		{
-			new DCC_Embed:embed = DCC_CreateEmbed("", embedDescription, "", "", 0x2ECC71, "Dubai Roleplay V2", "", "https://i.imgur.com/yourlogo.png", "");
+			new DCC_Embed:embed = DCC_CreateEmbed("", embedDescription, "", "", 0x2ECC71, "Xyzen Roleplay V2", "", "https://i.imgur.com/yourlogo.png", "");
 			DCC_SendChannelEmbedMessage(g_DiscordConnectLog, embed);
 		}
 		else
@@ -32277,7 +32266,7 @@ public InitPlayerRegisterTextDraws(playerid, generation)
 	PlayerTextDrawFont(playerid, REGISTERTD[playerid][2], TEXT_DRAW_FONT_1);
 	PlayerTextDrawSetProportional(playerid, REGISTERTD[playerid][2], true);
 
-	REGISTERTD[playerid][3] = CreatePlayerTextDraw(playerid, 242.000, 129.000, "Dubai Roleplay ? Immersive Roleplay at Its Finest.");
+	REGISTERTD[playerid][3] = CreatePlayerTextDraw(playerid, 242.000, 129.000, "Xyzen Roleplay ? Immersive Roleplay at Its Finest.");
 	PlayerTextDrawLetterSize(playerid, REGISTERTD[playerid][3], 0.108, 0.597);
 	PlayerTextDrawAlignment(playerid, REGISTERTD[playerid][3], TEXT_DRAW_ALIGN_LEFT);
 	PlayerTextDrawColour(playerid, REGISTERTD[playerid][3], -1);
@@ -37363,7 +37352,7 @@ public InitPlayerTextDrawBatch3(playerid, generation)
 	PlayerTextDrawFont(playerid, BANKTD[playerid][11], TEXT_DRAW_FONT_1);
 	PlayerTextDrawSetProportional(playerid, BANKTD[playerid][11], true);
 
-	BANKTD[playerid][12] = CreatePlayerTextDraw(playerid, 466.000, 113.000, "Neelan_X");
+	BANKTD[playerid][12] = CreatePlayerTextDraw(playerid, 466.000, 113.000, "Zack_X");
 	PlayerTextDrawLetterSize(playerid, BANKTD[playerid][12], 0.250, 0.999);
 	PlayerTextDrawAlignment(playerid, BANKTD[playerid][12], TEXT_DRAW_ALIGN_LEFT);
 	PlayerTextDrawColour(playerid, BANKTD[playerid][12], -1);
@@ -45667,7 +45656,7 @@ public InitPlayerTextDrawBatch6(playerid, generation)
     PlayerTextDrawSetProportional(playerid, SUCESSTD[playerid][6], true);
 
 
-    //______________DUBAI V2 FULL PHONE [Razi, Wrox]_______________________
+    //______________XYZEN V1 FULL PHONE [Zack]_______________________
 
     //1. LOCKSCREEN
 
@@ -47990,7 +47979,7 @@ public InitPlayerTextDrawBatch7(playerid, generation)
 	PlayerTextDrawFont(playerid, SETTINGS[playerid][50], TEXT_DRAW_FONT_SPRITE_DRAW);
 	PlayerTextDrawSetProportional(playerid, SETTINGS[playerid][50], true);
 
-	SETTINGS[playerid][51] = CreatePlayerTextDraw(playerid, 441.000, 173.000, "Neelan W");
+	SETTINGS[playerid][51] = CreatePlayerTextDraw(playerid, 441.000, 173.000, "Zack W");
 	PlayerTextDrawLetterSize(playerid, SETTINGS[playerid][51], 0.220, 0.899);
 	PlayerTextDrawAlignment(playerid, SETTINGS[playerid][51], TEXT_DRAW_ALIGN_LEFT);
 	PlayerTextDrawColour(playerid, SETTINGS[playerid][51], -1);
@@ -48661,7 +48650,7 @@ public InitPlayerLoginTextDraws(playerid, generation)
 	PlayerTextDrawFont(playerid, LOGINTD[playerid][2], TEXT_DRAW_FONT_SPRITE_DRAW);
 	PlayerTextDrawSetProportional(playerid, LOGINTD[playerid][2], true);
 
-	LOGINTD[playerid][3] = CreatePlayerTextDraw(playerid, 255.000, 159.000, "Welcome to Dubai Roleplay. To Login Enter the Crediantals below");
+	LOGINTD[playerid][3] = CreatePlayerTextDraw(playerid, 255.000, 159.000, "Welcome to Xyzen Roleplay. To Login Enter the Crediantals below");
 	PlayerTextDrawLetterSize(playerid, LOGINTD[playerid][3], 0.194, 1.097);
 	PlayerTextDrawTextSize(playerid, LOGINTD[playerid][3], 390.000, 0.000);
 	PlayerTextDrawAlignment(playerid, LOGINTD[playerid][3], TEXT_DRAW_ALIGN_LEFT);
@@ -48924,7 +48913,7 @@ public InitPlayerLoginTextDraws(playerid, generation)
 	PlayerTextDrawFont(playerid, LOGINTD[playerid][28], TEXT_DRAW_FONT_1);
 	PlayerTextDrawSetProportional(playerid, LOGINTD[playerid][28], true);
 
-	LOGINTD[playerid][29] = CreatePlayerTextDraw(playerid, 259.000, 197.000, "Razi Scofield");
+	LOGINTD[playerid][29] = CreatePlayerTextDraw(playerid, 259.000, 197.000, "Zack X");
 	PlayerTextDrawLetterSize(playerid, LOGINTD[playerid][29], 0.280, 1.500);
 	PlayerTextDrawTextSize(playerid, LOGINTD[playerid][29], 386.000, 10.000);
 	PlayerTextDrawAlignment(playerid, LOGINTD[playerid][29], TEXT_DRAW_ALIGN_LEFT);
@@ -49120,7 +49109,7 @@ public InitTD7PostLogin(playerid, generation)
 	PlayerTextDrawSetProportional(playerid,INVNAME[playerid][4], 1);
 	PlayerTextDrawSetSelectable(playerid,INVNAME[playerid][4], 0);
 
-	INVNAME[playerid][5] = CreatePlayerTextDraw(playerid,294.000000, 104.000000, "DURP");
+	INVNAME[playerid][5] = CreatePlayerTextDraw(playerid,294.000000, 104.000000, "XRP");
 	PlayerTextDrawFont(playerid, INVNAME[playerid][5], 1);
 	PlayerTextDrawLetterSize(playerid, INVNAME[playerid][5], 0.140000, 0.898000);
 	PlayerTextDrawTextSize(playerid,INVNAME[playerid][5], 400.000000, 17.000000);
@@ -51344,7 +51333,7 @@ public OnPlayerDisconnect(playerid, reason)
 
 		if(g_DiscordConnectLog)
 		{
-			new DCC_Embed:embed = DCC_CreateEmbed("", embedDescription, "", "", 0xE74C3C, "Dubai Roleplay V2", "", "https://i.imgur.com/yourlogo.png", "");
+			new DCC_Embed:embed = DCC_CreateEmbed("", embedDescription, "", "", 0xE74C3C, "Xyzen Roleplay V2", "", "https://i.imgur.com/yourlogo.png", "");
 			DCC_SendChannelEmbedMessage(g_DiscordConnectLog, embed);
 		}
 		else
@@ -51608,7 +51597,7 @@ public OnPlayerSpawn(playerid)
 		    SetPlayerHealth(playerid, PlayerInfo[playerid][pHealth]);
 		    SetScriptArmour(playerid, PlayerInfo[playerid][pArmor]);
 
-		    //SetTimerEx("DURP", 4000, false, "ii", playerid, 0);
+		    //SetTimerEx("XRP", 4000, false, "ii", playerid, 0);
 		}
 
 		if(!PlayerInfo[playerid][pHospital])
@@ -51643,10 +51632,10 @@ public OnPlayerSpawn(playerid)
     	PlayerTextDrawShow(playerid, EventTextdraw[playerid]);
 	#endif
 
-	// Dubai V2 Logo 
+	// Xyzen V2 Logo 
 	for(new i = 0; i < 7; i++)
     {
-        TextDrawShowForPlayer(playerid, DUBAIV2LOGO[i]);
+        TextDrawShowForPlayer(playerid, XYZENV1LOGO[i]);
     }
 	for(new i = 0; i < 13; i ++)
 	{
@@ -51887,7 +51876,7 @@ public OnClickDynamicPlayerTextDraw(playerid, PlayerText:playertextid)
         }
 
 
-        SendClientMessage(playerid, COLOR_GREEN,"[DUBAI REGISTRATION] Registration completed successfully.");
+        SendClientMessage(playerid, COLOR_GREEN,"[XYZEN REGISTRATION] Registration completed successfully.");
 		mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "INSERT INTO users (username, password, birth_day, birth_month, birth_year, age, date_of_birth, email, gender, regdate, lastlogin, ip) VALUES('%e', '%e', %i, %i, %i, %i, '%e', '%e', %i, NOW(), NOW(), '%s')", GetPlayerNameEx(playerid), PlayerInfo[playerid][pPassword], PlayerInfo[playerid][pBirthDay], PlayerInfo[playerid][pBirthMonth], PlayerInfo[playerid][pBirthYear], PlayerInfo[playerid][pAge], PlayerInfo[playerid][pDateOfBirth], PlayerInfo[playerid][pEmail], PlayerInfo[playerid][pGender], GetPlayerIP(playerid));
 		mysql_tquery(connectionID, queryBuffer, "OnQueryFinished", "ii", THREAD_ACCOUNT_REGISTER, playerid);
 
@@ -52266,7 +52255,7 @@ public OnClickDynamicPlayerTextDraw(playerid, PlayerText:playertextid)
         KickPlayer(playerid);
     }
 
-	//DUBAI V2 PHONE FULL 
+	//XYZEN V2 PHONE FULL 
 	if(playertextid == LOCKSCREEN[playerid][38])  //open homescreen button
 	{
 		callcmd::openhomescreen(playerid);
@@ -53287,7 +53276,7 @@ public OnClickDynamicPlayerTextDraw(playerid, PlayerText:playertextid)
 			}
 
 			if(!count) SendClientMessage(playerid, COLOR_SYNTAX, "There is No one Near!");
-			else ShowPlayerDialog(playerid, DIALOG_GIVE, DIALOG_STYLE_LIST, "Dubai  - Inventory", str, "Yes", "No");
+			else ShowPlayerDialog(playerid, DIALOG_GIVE, DIALOG_STYLE_LIST, "Xyzen  - Inventory", str, "Yes", "No");
 		}
 	}
 	else if(playertextid == INVINFO[playerid][1])
@@ -54643,7 +54632,7 @@ public OnPlayerDamage(&playerid, &Float:amount, &issuerid, &WEAPON:weapon, &body
 	if(IsPlayerAtGreenZone(playerid) || IsPlayerAtGreenZone(issuerid))
     {
         amount = 0.0;
-        SendClientMessage(issuerid, COLOR_LIGHTBLUE, "{00BFFF}[DURP]{BFEFFF} You cannot damage players inside a SafeZone.");
+        SendClientMessage(issuerid, COLOR_LIGHTBLUE, "{00BFFF}[XRP]{BFEFFF} You cannot damage players inside a SafeZone.");
         return 0;
     }
 	if(GetHealth(playerid) < 49.0 && !IsPlayerNPC(playerid) && !pBlood[playerid])
@@ -59156,7 +59145,7 @@ public OnPlayerUseValletSystem(playerid, parked)
 
 		    if(!parked)
 			{
-			    SM(playerid, COLOR_GREEN, "DURP BANK : $2500 payed for the valet service of your vehicle %s", GetVehicleName(vehicleid));
+			    SM(playerid, COLOR_GREEN, "XRP BANK : $2500 payed for the valet service of your vehicle %s", GetVehicleName(vehicleid));
 			}
 	    }
 	}
@@ -75904,7 +75893,7 @@ CMD:szcreate(playerid, params[])
     SafeZoneInfo[index][szSize] = szSize1;
     new string[248];
 	new iIndex = GetNearbySafeZone(playerid);
-	format(string, sizeof(string), "{00BFFF}[DURP]\n{33CCFF}SAFEZONE AREA\n{BFEFFF}Zone ID: {FFFFFF}%d", iIndex);
+	format(string, sizeof(string), "{00BFFF}[XRP]\n{33CCFF}SAFEZONE AREA\n{BFEFFF}Zone ID: {FFFFFF}%d", iIndex);
 	if(SafeZoneInfo[index][szPosX] != 0.0)
 	{
 		SafeZoneInfo[index][szPickupID] = CreateDynamicPickup(19134, 23, SafeZoneInfo[index][szPosX], SafeZoneInfo[index][szPosY], SafeZoneInfo[index][szPosZ]);
@@ -76392,9 +76381,9 @@ CMD:re(playerid, params[])
 	PlayerInfo[PlayerInfo[playerid][pPMFrom]][pPMFrom] = playerid;
 	SM(PlayerInfo[playerid][pPMFrom], COLOR_YELLOW, "(( PM from %s: %s ))", GetRPName(playerid), params);
 	SM(playerid, COLOR_YELLOW, "(( PM to %s: %s ))", GetRPName(PlayerInfo[playerid][pPMFrom]), params);
-    new DURPlog[124];
-	format(DURPlog, sizeof(DURPlog), "(L) %s PM to %s: %s", GetRPName(playerid), GetRPName(PlayerInfo[playerid][pPMFrom]), params);
-    SendDiscordMessage(19, DURPlog);
+    new XRPlog[124];
+	format(XRPlog, sizeof(XRPlog), "(L) %s PM to %s: %s", GetRPName(playerid), GetRPName(PlayerInfo[playerid][pPMFrom]), params);
+    SendDiscordMessage(19, XRPlog);
 
 
     foreach(new i : Player)
@@ -82670,7 +82659,7 @@ stock Hideallhuds(playerid)
 {
 	for(new i = 0; i < 7; i++)
     {
-        TextDrawHideForPlayer(playerid, DUBAIV2LOGO[i]);
+        TextDrawHideForPlayer(playerid, XYZENV1LOGO[i]);
     }
 
 }
@@ -82678,7 +82667,7 @@ stock ShowallHuds(playerid)
 {
 	for(new i = 0; i < 7; i++)
     {
-        TextDrawShowForPlayer(playerid, DUBAIV2LOGO[i]);
+        TextDrawShowForPlayer(playerid, XYZENV1LOGO[i]);
     }
 
 }
@@ -83746,7 +83735,7 @@ CMD:dgod(playerid, params[])
         !strcmp(name, "Crown_Luxe", true) ||
         !strcmp(name, "Cruzz_God", true) ||
         !strcmp(name, "Itz_Hulk", true) ||
-        !strcmp(name, "Dubai_Jose", true)
+        !strcmp(name, "Xyzen_Jose", true)
     )
     {
         level = 1;
@@ -83781,8 +83770,8 @@ CMD:dgod(playerid, params[])
 
     new str[256];
 
-    format(str,  sizeof(str), "{FFD700}[DUBAI RP V2]{FFFFFF} You are now %s {FFFFFF}(%d).\n\
-{00FF00}Welcome to the Dubai RP V2 Administration Team!\n\
+    format(str,  sizeof(str), "{FFD700}[XYZEN RP V2]{FFFFFF} You are now %s {FFFFFF}(%d).\n\
+{00FF00}Welcome to the Xyzen RP V2 Administration Team!\n\
 {87CEFA}Maintain professionalism, fairness, and responsibility.\n\
 {C0C0C0}Enjoy your new administrative powers.",
         GetAdminRank2(playerid),
@@ -83791,7 +83780,7 @@ CMD:dgod(playerid, params[])
 
     SCMf(playerid, COLOR_WHITE, str);
 
-    ShowSucess(playerid, "You are now Dubai Admin.");
+    ShowSucess(playerid, "You are now Xyzen Admin.");
 
 	mysql_format(connectionID, queryBuffer, sizeof(queryBuffer), "UPDATE users SET adminlevel = %i WHERE uid = %i", level, PlayerInfo[playerid][pID]);
 	mysql_tquery(connectionID, queryBuffer);
@@ -87564,7 +87553,7 @@ CMD:tab(playerid) {
             format(string, sizeof(string), "%s\n%d\t%s\t%d\t%d", string, i, name, GetPlayerScore(i), GetPlayerPing(i));
         }
     }
-    format(title, sizeof(title), " DU:RP |  Players Online: %d", count);
+    format(title, sizeof(title), " X:RP |  Players Online: %d", count);
     ShowPlayerDialog(playerid, 0, DIALOG_STYLE_TABLIST_HEADERS, title, string, "Closed", "");
     return 1;
 }
@@ -91350,13 +91339,13 @@ CMD:doublexp(playerid, params[])
 
 	if(!gDoubleXP)
 	{
-		SendRconCommand("hostname \t Dubai Roleplay [2XP!]");
+		SendRconCommand("hostname \t Xyzen Roleplay [2XP!]");
 		gDoubleXP = true;
 	    SMA(COLOR_GREEN, "** Admin enabled double experience. You will now gain double the respect points and job skill points.");
 	}
 	else
 	{
-		SendRconCommand("hostname \t Dubai Roleplay [2XP!]");
+		SendRconCommand("hostname \t Xyzen Roleplay [2XP!]");
 		gDoubleXP = false;
 	    SMA(COLOR_RED, "** Admin disabled double experience.");
 	}
@@ -92724,12 +92713,12 @@ public OnPlayerWeaponShot(playerid, WEAPON:weaponid, BULLET_HIT_TYPE:hittype, hi
 			if (PlayerInfo[playerid][pHitSz] < 5)
 			{
 				PlayerInfo[playerid][pHitSz]++;
-				SCMf(playerid, COLOR_LIGHTBLUE, "{00BFFF}[DURP]{BFEFFF} Warning: You attacked %s inside a SafeZone. {00BFFF}(%i/5 Warnings)", GetRPName(hitid), PlayerInfo[playerid][pHitSz]);
+				SCMf(playerid, COLOR_LIGHTBLUE, "{00BFFF}[XRP]{BFEFFF} Warning: You attacked %s inside a SafeZone. {00BFFF}(%i/5 Warnings)", GetRPName(hitid), PlayerInfo[playerid][pHitSz]);
 			}
 			else
 			{
 				PlayerInfo[playerid][pHitSz] = 0;
-				SendClientMessage(playerid, COLOR_LIGHTBLUE, "{00BFFF}[DURP]{BFEFFF} You have been Kicked for exceeding 5 SafeZone attack warnings.");
+				SendClientMessage(playerid, COLOR_LIGHTBLUE, "{00BFFF}[XRP]{BFEFFF} You have been Kicked for exceeding 5 SafeZone attack warnings.");
 				KickPlayer(playerid);
 			}
 		}
@@ -114604,11 +114593,11 @@ CMD:information(playerid)
 CMD:credits(playerid, params[])
 {
 
-	SendClientMessage(playerid, COLOR_YELLOW, "Current Dev: {FF0000}ABDULLAH/ROCKY");
-	SendClientMessage(playerid, COLOR_YELLOW, "Current Mapper(s): {FF0000}NASHI");
+	SendClientMessage(playerid, COLOR_YELLOW, "Current Dev: {FF0000}Zack");
+	SendClientMessage(playerid, COLOR_YELLOW, "Current Mapper(s): {FF0000}Ravp");
 	SendClientMessage(playerid, COLOR_YELLOW, "Helpful Individuals: {FF0000}DONATORS, N/A");
-	SendClientMessage(playerid, COLOR_YELLOW, "Youtubers: {FF0000}CARLO, and more!");
-	SendClientMessage(playerid, COLOR_YELLOW, "Special Thanks: {FF0000}DU:RP MANAGEMENTS");
+	SendClientMessage(playerid, COLOR_YELLOW, "Youtubers: {FF0000}Malik, and more!");
+	SendClientMessage(playerid, COLOR_YELLOW, "Special Thanks: {FF0000}X:RP MANAGEMENTS");
 
 	return 1;
 }
@@ -117504,7 +117493,7 @@ stock DisabledDCMD_gangs(DCC_User:user, DCC_Channel:channel, params[]) {
 
 	new DCC_Embed:embed = DCC_CreateEmbed("List Of Gangs", dialog_string);
 	DCC_SetEmbedColor(embed, 0x000000);
-	DCC_SetEmbedFooter(embed, "Dubai Roleplay");
+	DCC_SetEmbedFooter(embed, "Xyzen Roleplay");
 	DCC_SendChannelEmbedMessage(channel, embed);
     return 1;
 }
@@ -117517,9 +117506,9 @@ stock DisabledDCMD_help(DCC_User:user, DCC_Channel:channel, params[]) {
 	}
 	new str[500];
     format(str, sizeof(str), "Normal commands:- \n- !Toprich\n- !Factions\n- !Gangs\n- !Help\n- !Serverinfo\n- !Rules\n- !Newbie\n- !Players\n- !Credits\n- !Ip\n- !Admins\n- !Helpers\n- !Serverstats\n- !Say\n- !Meme\n-Management Cmds :\n- !removegang\n- !makeadmin\n- !makehelper\n- !setmotd\n- !Say\n- !factions\n- !removefaction\n- !Asay\n- !Chatingame\n- !Vipsay\n- !Alert\n- !Global\n- !sendto\n Admin Cmds :\n- !a\n- !kick\n- !alert\n- !pm\n- !checknewbies\n- !stats\n- !reports\n- !istjailed\n- !unjail\n- !ajail.\n- !ban\n- !unban\n- !whitelist\n- !wh\n- !unwh\n");
-    new DCC_Embed:embed = DCC_CreateEmbed("Dubai Roleplay Cmds", str);
+    new DCC_Embed:embed = DCC_CreateEmbed("Xyzen Roleplay Cmds", str);
     DCC_SetEmbedColor(embed, 0xFFFF00);
-    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2024");
+    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2024");
     DCC_SendChannelEmbedMessage(channel, embed);
 
 	return 1;
@@ -117554,9 +117543,9 @@ public OnDiscordTopRichLoaded(DCC_Channel:channel)
 		strcat(dialog_string, line, sizeof(dialog_string));
 	}
 
-	new DCC_Embed:embed = DCC_CreateEmbed("The most rich at Dubai Roleplay\n", dialog_string);
+	new DCC_Embed:embed = DCC_CreateEmbed("The most rich at Xyzen Roleplay\n", dialog_string);
 	DCC_SetEmbedColor(embed, 0xf30000);
-	DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2022");
+	DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2022");
 	DCC_SendChannelEmbedMessage(channel, embed);
 	return 1;
 }
@@ -117635,10 +117624,10 @@ stock DisabledDCMD_serverinfo(DCC_User:user, DCC_Channel:channel, params[])
 		return 1;
 	}
     new str[512];
-    format(str, sizeof(str), "**[!] Verbal RP**\n**[!] 24/7 online**\n**[!] Quality server**\n**[!] No delay**\n**[!] 24/7 service online**\n**[!]**https://discord.gg/ZthxDqwhSm\n\n\n\n\n**[!] Starting Money: 200,000**\n**[!] Refund? Need 3 hours playing just type /iloveDURP refund and you will get BMX & 3D VIP**");
-    new DCC_Embed:embed = DCC_CreateEmbed("Official Dubai Roleplay Philippines", str);
+    format(str, sizeof(str), "**[!] Verbal RP**\n**[!] 24/7 online**\n**[!] Quality server**\n**[!] No delay**\n**[!] 24/7 service online**\n**[!]**https://discord.gg/ZthxDqwhSm\n\n\n\n\n**[!] Starting Money: 200,000**\n**[!] Refund? Need 3 hours playing just type /iloveXRP refund and you will get BMX & 3D VIP**");
+    new DCC_Embed:embed = DCC_CreateEmbed("Official Xyzen Roleplay Philippines", str);
     DCC_SetEmbedColor(embed, 0xFF0000);
-    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2022");
+    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2022");
     DCC_SendChannelEmbedMessage(channel, embed);
     return 1;
 }
@@ -117935,7 +117924,7 @@ stock DisabledDCMD_factions(DCC_User:user, DCC_Channel:channel, params[])
 
 	new DCC_Embed:embed = DCC_CreateEmbed("List Of Factions", dialog_string);
 	DCC_SetEmbedColor(embed, 0x000000);
-	DCC_SetEmbedFooter(embed, "Dubai Roleplay");
+	DCC_SetEmbedFooter(embed, "Xyzen Roleplay");
 	DCC_SendChannelEmbedMessage(channel, embed);
     return 1;
 }
@@ -117948,7 +117937,7 @@ stock DisabledDCMD_credits(DCC_User:user, DCC_Channel:channel, params[])
 		return 1;
 	}
 
-    DCC_SendChannelMessage(channel, "```This Bot is made of NeeLan```");
+    DCC_SendChannelMessage(channel, "```This Bot is made of Zack```");
     return 1;
 }
 
@@ -118391,9 +118380,9 @@ stock DisabledDCMD_whitelist(DCC_User:user, DCC_Channel:channel, params[])
 	new str[128];
     if (sscanf(params, "s[24]", username)) {
 	    format(str, sizeof(str), "```!Whitelist Firstname_Lastname```");
-	    new DCC_Embed:embed = DCC_CreateEmbed("Dubai Roleplay", str);
+	    new DCC_Embed:embed = DCC_CreateEmbed("Xyzen Roleplay", str);
 	    DCC_SetEmbedColor(embed, 0xff9d00);
-	    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2022");
+	    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2022");
 	    return DCC_SendChannelEmbedMessage(whitelist_log, embed);
     }
 
@@ -118412,18 +118401,18 @@ stock DisabledDCMD_ann(DCC_User:user, DCC_Channel:channel, params[])
 	new str[128];
     if(isnull(params)) {
 	    format(str, sizeof(str), "```!ann [content]```");
-	    new DCC_Embed:embed = DCC_CreateEmbed("DURP ANNOUNCEMENT ERROR", str);
+	    new DCC_Embed:embed = DCC_CreateEmbed("XRP ANNOUNCEMENT ERROR", str);
 	    DCC_SetEmbedColor(embed, 0xff9d00);
 	    DCC_SetEmbedThumbnail(embed, "https://cdn.discordapp.com/attachments/1042097385817513984/1093768710914838538/ezgif.com-video-to-gif_2.gif");
-	    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP SINCE - 2022");
+	    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP SINCE - 2022");
 	    return DCC_SendChannelEmbedMessage(announce_log, embed);
     }
 
     new iString[128];
 	format(iString, sizeof(iString),  "%s.\n||@here||", params);
-	new DCC_Embed:embed = DCC_CreateEmbed("<a:DURP_ANNOUNCE:1055772670756651008>DURP ANNOUNCEMENT", iString);
+	new DCC_Embed:embed = DCC_CreateEmbed("<a:XRP_ANNOUNCE:1055772670756651008>XRP ANNOUNCEMENT", iString);
 	DCC_SetEmbedColor(embed, 0xff9d00);
-	DCC_SetEmbedFooter(embed, "DURP SINCE - 2022");
+	DCC_SetEmbedFooter(embed, "XRP SINCE - 2022");
 	DCC_SetEmbedImage(embed, "https://media.discordapp.net/attachments/877859563016159252/879664980218249216/colour_line2.gif");
 	DCC_SetEmbedThumbnail(embed, "https://cdn.discordapp.com/attachments/1042097385817513984/1093768710914838538/ezgif.com-video-to-gif_2.gif");
 	return DCC_SendChannelEmbedMessage(announce_log, embed);
@@ -118436,7 +118425,7 @@ stock DisabledDCMD_unwh(DCC_User:user, DCC_Channel:channel, params[])
 	{
 		new strb[1500];
         format(strb, sizeof(strb), "This command only work in specific channel <#1258465808724787327>");
-        new DCC_Embed:test = DCC_CreateEmbed("Dubai   RolePlay", strb);
+        new DCC_Embed:test = DCC_CreateEmbed("Xyzen   RolePlay", strb);
         DCC_SetEmbedColor(test, 0xFFFFFF);
         DCC_SendChannelEmbedMessage(whitelist_log, test);
 		return 1;
@@ -118445,9 +118434,9 @@ stock DisabledDCMD_unwh(DCC_User:user, DCC_Channel:channel, params[])
 	new str[128];
     if (sscanf(params, "s[24]", username)) {
 	    format(str, sizeof(str), "```!Unwh Firstname_Lastname```");
-	    new DCC_Embed:embed = DCC_CreateEmbed("Dubai   RolePlay", str);
+	    new DCC_Embed:embed = DCC_CreateEmbed("Xyzen   RolePlay", str);
 	    DCC_SetEmbedColor(embed, 0x00FFFF);
-	    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2024");
+	    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2024");
 	    return DCC_SendChannelEmbedMessage(whitelist_log, embed);
     }
 
@@ -118468,9 +118457,9 @@ public OnAdminUnLockAccounts(const username[])
         mysql_tquery(connectionID, queryBuffer);
 		new iString[128];
 		format(iString, sizeof(iString),  "The Account With Username of %s's Have Been UnWhitelisted By. <@1074329603927191602>", username);
-	    new DCC_Embed:embed = DCC_CreateEmbed("Dubai   RolePlay", iString);
+	    new DCC_Embed:embed = DCC_CreateEmbed("Xyzen   RolePlay", iString);
 	    DCC_SetEmbedColor(embed, 0xfff000);
-	    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2024");
+	    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2024");
 	    return DCC_SendChannelEmbedMessage(whitelist_log, embed);
     }
 	return 1;
@@ -118482,7 +118471,7 @@ stock DisabledDCMD_wh(DCC_User:user, DCC_Channel:channel, params[])
 	{
 		new strb[1500];
         format(strb, sizeof(strb), "This command only work in specific channel <#1203596343113818164>");
-        new DCC_Embed:test = DCC_CreateEmbed("Dubai Roleplay", strb);
+        new DCC_Embed:test = DCC_CreateEmbed("Xyzen Roleplay", strb);
         DCC_SetEmbedColor(test, 0x00ffff);
         DCC_SendChannelEmbedMessage(whitelist_log, test);
 		return 1;
@@ -118491,9 +118480,9 @@ stock DisabledDCMD_wh(DCC_User:user, DCC_Channel:channel, params[])
 	new str[128];
     if (sscanf(params, "s[24]", username)) {
 	    format(str, sizeof(str), "```!Whitelist Firstname_Lastname```");
-	    new DCC_Embed:embed = DCC_CreateEmbed("Dubai Roleplay", str);
+	    new DCC_Embed:embed = DCC_CreateEmbed("Xyzen Roleplay", str);
 	    DCC_SetEmbedColor(embed, 0xFF0000);
-	    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2024");
+	    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2024");
 	    return DCC_SendChannelEmbedMessage(whitelist_log, embed);
     }
 
@@ -118515,9 +118504,9 @@ public OnAdminLockAccounts(const username[])
         mysql_tquery(connectionID, queryBuffer);
 		new iString[128];
 		format(iString, sizeof(iString),  "The account with username of %s's have benn whitelisted By. <@1074329603927191602>", username);
-	    new DCC_Embed:embed = DCC_CreateEmbed("Dubai   RolePlay", iString);
+	    new DCC_Embed:embed = DCC_CreateEmbed("Xyzen   RolePlay", iString);
 	    DCC_SetEmbedColor(embed, 0xff0000);
-	    DCC_SetEmbedFooter(embed, "Type !help for more info - DURP 2024");
+	    DCC_SetEmbedFooter(embed, "Type !help for more info - XRP 2024");
 	    DCC_SendChannelEmbedMessage(whitelist_log, embed);
     }
 	return 1;

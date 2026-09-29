@@ -1,7 +1,4 @@
 
-// WroxExM GM Developer 
-// Built On CodexAi
-
 
 #if defined _anim_notiff_inc
     #endinput

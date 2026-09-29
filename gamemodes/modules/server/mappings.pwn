@@ -63,7 +63,7 @@ public LoadMappings_Batch(batchid)
 stock LoadMappings1()
 {
 
-// DUBAI MUTHUK
+// XYZEN MUTHUK
     tmpobjid = CreateDynamicObject(18773, 348.319976, -1725.092041, 8.337631, 0.000000, 0.000000, 0.000000, -1, -1, -1, 500.00, 500.00); 
     SetDynamicObjectMaterial(tmpobjid, 0, 10765, "airportgnd_sfse", "black64", 0x00000000);
     SetDynamicObjectMaterial(tmpobjid, 1, 10765, "airportgnd_sfse", "black64", 0x00000000);
@@ -508,7 +508,7 @@ stock LoadMappings1()
     tmpobjid = CreateDynamicObject(19122, 343.076904, -1793.413696, 5.846198, 0.000000, 0.000000, 0.000000, -1, -1, -1, 500.00, 500.00); 
 
 
-// DUBAI SHOWROOM
+// XYZEN SHOWROOM
     tmpobjid = CreateDynamicObject(18765, 977.144287, -1988.250366, 9.849599, 0.000000, 0.000001, -179.999984, -1, -1, -1, 500.00, 500.00); 
     SetDynamicObjectMaterial(tmpobjid, 0, 16640, "a51", "ws_metalpanel1", 0x00000000);
     tmpobjid = CreateDynamicObject(18765, 967.234191, -1988.250366, 9.849599, 0.000000, 0.000001, -179.999984, -1, -1, -1, 500.00, 500.00); 
@@ -681,7 +681,7 @@ stock RemoveMappingObject(playerid)
 
 
 
-    // DUBAI MUTHUK
+    // XYZEN MUTHUK
     RemoveBuildingForPlayer(playerid, 1297, 348.703, -1753.800, 6.882, 0.250);
     RemoveBuildingForPlayer(playerid, 1297, 345.312, -1775.949, 7.453, 0.250);
     RemoveBuildingForPlayer(playerid, 1297, 339.289, -1811.819, 6.765, 0.250);
